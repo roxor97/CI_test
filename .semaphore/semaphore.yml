@@ -11,5 +11,7 @@ blocks:
         - name: Build
           commands:
             - checkout
+            - cache restore
             - sem-version java 1.8
             - mvn package
+            - cache store
